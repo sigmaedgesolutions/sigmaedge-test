@@ -20,6 +20,7 @@ function App() {
     }
      }
   return (
+    //Git checking 
     <div className="App">
         <h3>Welcome to Sigma edge solutions</h3>    
     <label>Name</label>
