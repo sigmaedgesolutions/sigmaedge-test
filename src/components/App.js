@@ -22,17 +22,20 @@ function App() {
   return (
     //Git checking 
     <div className="App">
-        <h3>Welcome to Sigma edge solutions</h3>    
-    <label>Name</label>
-    <input 
-    type='text'
-    value={name}
-    onChange={onMynameChange}
-    >
-    </input>
-    <div>
-    <span>{error}</span>
-    </div>
+        <h3>Welcome to Sigma edge solutions</h3>   
+        <div>
+          <div><label>Name</label></div>
+            <input 
+            type='text'
+            value={name}
+            onChange={onMynameChange}
+            >
+            </input>
+            <div>
+            <span>{error}</span>
+            </div>        
+        </div> 
+           
     
     <button 
     onClick={handleSubmit}
