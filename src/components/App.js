@@ -1,5 +1,6 @@
 import "../App.css";
 import { useState } from "react";
+import Navebar from "./navbar";
 function App() {
   const [name, setName] = useState("");
   const [nameError, setNameError] = useState("");
@@ -34,6 +35,7 @@ function App() {
   };
   return (
     <div className="App">
+      <Navebar />
       <h3>Welcome to Sigma edge solutions</h3>
       <div>
         <div>
