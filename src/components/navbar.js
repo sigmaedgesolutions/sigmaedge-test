@@ -1,9 +1,10 @@
 import React from "react";
+import {logo} from "../images/"
 
 function Navebar (){
     return(
         <div>
-            <h3>This is navbar component</h3>
+            
         </div>
     )
 }
