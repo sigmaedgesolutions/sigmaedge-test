@@ -5,6 +5,9 @@ function App() {
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+
   const onMynameChange = (e) => {
     setName(e.target.value);
     setNameError("");
@@ -13,6 +16,10 @@ function App() {
     setEmail(e.target.value);
     setEmailError("");
   };
+  const onMyPhoneNumberChange = (e) => {
+    setPhone(e.target.value);
+    setPhoneError("");
+  };
 
   const handleSubmit = () => {
     if (name == "") {
@@ -20,9 +27,9 @@ function App() {
     }
     if (email == "") {
       setEmailError("Enter your email id ");
-    } else {
-      setNameError("");
-      setEmailError("");
+    }
+    if (phone == "") {
+      setPhoneError("Please enter valid mobile number");
     }
   };
   return (
@@ -35,7 +42,7 @@ function App() {
         <input type="text" value={name} onChange={onMynameChange} />
 
         <div>
-          <span>{nameError}</span>
+          <span style={{ color: "red" }}>{nameError}</span>
         </div>
       </div>
       <div>
@@ -45,15 +52,15 @@ function App() {
         <input type="email" value={email} onChange={onMyEmailChange} />
 
         <div>
-          <span>{emailError}</span>
+          <span style={{ color: "red" }}>{emailError}</span>
         </div>
+        <div>
+          <label>Phone Number</label>
+        </div>
+        <input type="number" value={phone} onChange={onMyPhoneNumberChange} />
+        <div style={{ color: "red" }}>{phoneError}</div>
       </div>
       <button onClick={handleSubmit}>Submit</button>
-
-      {/* Prasad You have to work from here */}
-
-      <h2>Here is my work</h2>
-      <h2>Here is my Welcome</h2>
     </div>
   );
 }
