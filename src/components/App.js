@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navebar from "./navbar";
 function App() {
   const [name, setName] = useState("");
@@ -7,7 +7,13 @@ function App() {
   const [emailError, setEmailError] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [phoneError, setPhoneError] = useState("");
+  const [phoneError, setPhoneError] = useState(""); 
+
+  const [data,setData] = useState(false)
+
+  useEffect (()=>{
+    alert("hey dude")
+  },[data])
 
   const onMynameChange = (e) => {
     setName(e.target.value);
