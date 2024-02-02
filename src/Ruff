@@ -1,0 +1,19 @@
+ /* Media Query for Responsive Design */
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .nav-options {
+      flex: none;
+      order: 3; /* Display nav options at the bottom on small screens */
+      margin-top: 15px;
+    }
+  
+    .user-icons {
+      order: 2; /* Display user icons above nav options on small screens */
+      margin-top: 15px;
+    }
+  }
+  

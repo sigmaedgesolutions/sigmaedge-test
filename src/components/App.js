@@ -41,7 +41,7 @@ function App() {
   };
   return (
     <div className="App">
-      <Navebar />
+      
       <h3>Welcome to Sigma edge solutions</h3>
       <div>
         <div>
