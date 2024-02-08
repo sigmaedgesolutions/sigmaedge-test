@@ -1,23 +1,35 @@
 import React from "react";
-import "../Mystyle.css"
+import "../Mystyle.css";
+import { useState } from "react";
 
 
-function Navebar (){
+const Navebar= ()=>{
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    const toggleNav = () => {
+      setIsNavOpen(!isNavOpen);
+    }; 
     return(
-     <div>
-        <nav>
-            <label className="logo">My Logo</label>
-            <ul>
-                <li><a className="active" href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Images</a></li>
-                <li><a href="#">About </a></li>
-                <li><a href="#">Feedback</a></li>
-
-            </ul>
-        </nav>
-     </div>
+    <div className="App">
+    <header>
+      <div className="logo">Your Logo</div>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li> 
+        </ul>
+      </nav>
+      {/* <button className="burger-btn" onClick={toggleNav}>
+        ☰
+      </button> */}
+    </header>
+    <main>
+      <p>Your content goes here.</p>
+    </main>
+  </div>
     )
 }
 export default Navebar;
